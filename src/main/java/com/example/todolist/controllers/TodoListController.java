@@ -32,12 +32,8 @@ public class TodoListController {
     public String add(){
 
         System.out.println("método add invocado");
-
-
         return "";
 
     }
-    
-
 
 }
