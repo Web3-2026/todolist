@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+
+    <div class="cadastrar">
+        <form th:action="@{/add}" method="post">
+            <input type="text" name="todo">
+            <button type="submit">novo</button>
+        </form>
+
+    </div>
+
+    <ul>
+        <li th:each="todo : ${todoList}">
+            <span th:text="${todo}" ></span>
+            <a href="#">feito</a>
+            <a href="#">desfazer</a>
+            <a href="#">remover</a>
+        </li>
+    </ul>
+    
+</body>
+</html>
