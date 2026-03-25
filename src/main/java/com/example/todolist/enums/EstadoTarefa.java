@@ -7,7 +7,7 @@ public enum EstadoTarefa {
 
     private String descricao;
 
-    EstadoTarefa(String descricao){
+    private EstadoTarefa(String descricao){
         this.descricao = descricao;
     }
 
@@ -15,6 +15,6 @@ public enum EstadoTarefa {
         return this.descricao;
     }
 
-    
+
 
 }

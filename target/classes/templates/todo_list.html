@@ -19,11 +19,14 @@
     </div>
 
     <ul>
-        <li th:each="todo : ${todoList}">
-            <span th:text="${todo}" ></span>
-            <a href="#">feito</a>
-            <a href="#">desfazer</a>
-            <a href="#">remover</a>
+        <li th:each="tarefa : ${todoList}">
+            <span th:text="${tarefa.id}" ></span> | 
+            <span th:text="${tarefa.tarefa}" ></span> | 
+            <span th:text="${tarefa.estado.descricao}" ></span> | 
+            <span th:text="${tarefa.dataLimite}" ></span> | 
+
+            <a th:href="@{/aterar-estado/{id} (id = ${tarefa.id}) }">alterar estado</a>
+            <a th:href="@{/remover/{id} (id = ${tarefa.id}) }">remover</a>
         </li>
     </ul>
     
